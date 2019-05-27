@@ -1,13 +1,10 @@
-
-'strict'
+'use strict';
 const fs = require('fs');
-
-// ------------------ GET TO WORK ------------------- //
+const Bitmap = require('./lib/bitmap.js');
+// const transform = require("./lib/transform.js");
 
 function transformWithCallbacks() {
-
   fs.readFile(file, (err, buffer) => {
-
     if (err) {
       throw err;
     }
@@ -24,7 +21,6 @@ function transformWithCallbacks() {
       }
       console.log(`Bitmap Transformed: ${bitmap.newFile}`);
     });
-
   });
 }
 
@@ -34,4 +30,3 @@ const [file, operation] = process.argv.slice(2);
 let bitmap = new Bitmap(file);
 
 transformWithCallbacks();
-

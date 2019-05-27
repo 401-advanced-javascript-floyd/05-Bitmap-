@@ -15,7 +15,7 @@ function transformWithCallbacks() {
 
     // Note that this has to be nested!
     // Also, it uses the bitmap's instance properties for the name and thew new buffer
-    fs.writeFile(bitmap.newFile, bitmap.buffer, (err, out) => {
+    fs.writeFile(bitmap.newFile, bitmap.buffer, (err) => {
       if (err) {
         throw err;
       }
